@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { initializePortfolio } from "@/lib/portfolio";
-import { SpotlightHero } from "@/components/SpotlightHero";
+import { KineticHero } from "@/components/KineticHero";
 
 export const Route = createFileRoute("/")({ component: Index });
 
@@ -40,7 +40,7 @@ function Index() {
         </nav>
       </header>
       <main id="principal">
-        <SpotlightHero />
+        <KineticHero />
         <section className="projects section" id="projetos">
           <div className="container">
             <div className="section-top" data-reveal>
