@@ -323,3 +323,100 @@
 @media (prefers-reduced-motion:reduce) {
   .reference-hero__beam,.reference-hero__lightwash,.reference-hero__line { animation:none; }
 }
+
+
+/* Ajustes finais da dobra 01: retrato monocromático, profundidade e blur
+   inferior da referência do Alex Rivera, sem modificar a copy existente. */
+.reference-header__brand { font-weight:600; letter-spacing:var(--tracking-tight,-.025em); }
+.reference-hero { padding-bottom:clamp(92px,12vh,140px); }
+.reference-hero__content { z-index:1; }
+.reference-hero__avatar {
+  isolation:isolate;
+  width:.8em;
+  height:.8em;
+  background:#050505;
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 0 0 1px rgba(255,255,255,.04),0 0 24px rgba(0,0,0,.6);
+}
+.reference-hero__avatar::after {
+  content:"";
+  pointer-events:none;
+  position:absolute;
+  inset:0;
+  z-index:1;
+  border-radius:inherit;
+  background:radial-gradient(ellipse at 45% 33%,transparent 20%,rgba(0,0,0,.10) 50%,rgba(0,0,0,.47) 100%),
+    linear-gradient(90deg,rgba(0,0,0,.38),transparent 45%,rgba(0,0,0,.14));
+}
+.reference-hero__avatar img {
+  object-position:52% 19%;
+  transform:scale(2.3);
+  transform-origin:50% 18%;
+  filter:grayscale(1) saturate(0) contrast(1.33) brightness(.58);
+}
+.reference-hero__lightwash {
+  filter:blur(54px);
+}
+.reference-hero__beam { filter:blur(11px); }
+.reference-hero__beam--two { box-shadow:0 0 86px rgba(76,80,255,.33); }
+.reference-hero__beam--three { box-shadow:0 0 62px rgba(99,102,241,.32); }
+
+/* Reflexos e silhuetas desfocadas que desaparecem no preto na base do hero */
+.reference-hero__bottom-bloom {
+  position:absolute;
+  inset:auto -18% -19% 15%;
+  height:44%;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse 39% 31% at 59% 47%,rgba(60,95,250,.17),transparent 90%),
+    radial-gradient(ellipse 34% 29% at 69% 38%,rgba(133,93,244,.13),transparent 90%),
+    linear-gradient(180deg,transparent 5%,rgba(0,0,0,.2) 63%,#000 100%);
+  filter:blur(44px);
+  opacity:.64;
+  transform:translate3d(0,0,0);
+}
+.reference-hero__proof {
+  position:relative;
+  z-index:1;
+  opacity:.60;
+  filter:blur(2.7px);
+  transition:filter var(--transition-image,600ms ease),opacity var(--transition-image,600ms ease);
+}
+.reference-hero__proof:hover {
+  filter:blur(0);
+  opacity:.85;
+}
+.reference-hero__bottom-ghost {
+  position:relative;
+  z-index:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:clamp(26px,5vw,72px);
+  max-width:880px;
+  margin:24px auto 0;
+  overflow:hidden;
+  white-space:nowrap;
+  color:rgba(255,255,255,.25);
+  font:500 12px/1.5 var(--font-primary,Inter,system-ui,sans-serif);
+  filter:blur(10px);
+  opacity:.36;
+  pointer-events:none;
+  user-select:none;
+}
+.reference-hero__bottom-ghost::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,#000,transparent 20%,transparent 80%,#000);
+}
+@media(max-width:767px) {
+  .reference-hero { padding-bottom:100px; }
+  .reference-hero__avatar { width:.67em;height:.67em; }
+  .reference-hero__proof { filter:blur(1.5px);opacity:.64; }
+  .reference-hero__bottom-ghost { margin-top:20px;gap:24px;font-size:10px; }
+  .reference-hero__bottom-bloom { inset:auto -60% -20% -15%;height:38%;opacity:.52; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .reference-hero__proof { transition:none; }
+}

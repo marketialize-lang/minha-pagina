@@ -1,9 +1,9 @@
 /**
  * Primeira dobra inspirada diretamente na referência do vídeo enviada pelo cliente.
- * Identidade Quebre o Padrão e foto local de Rafael; sem uso de assets de terceiros.
+ * Identidade Rafael Fonseca e foto local de Rafael; sem uso de assets de terceiros.
  */
 const WhatsAppLink =
-  "https://wa.me/5521982027149?text=Ol%C3%A1%2C%20Quebre%20o%20Padr%C3%A3o!%20Quero%20conversar%20sobre%20um%20projeto.";
+  "https://wa.me/5521982027149?text=Ol%C3%A1%2C%20Rafael%20Fonseca!%20Quero%20conversar%20sobre%20um%20projeto.";
 
 function ClockIcon() {
   return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3.5 2" /></svg>;
@@ -24,6 +24,7 @@ export function ReferenceHero() {
         <span className="reference-hero__beam reference-hero__beam--two" />
         <span className="reference-hero__beam reference-hero__beam--three" />
         <span className="reference-hero__beam reference-hero__beam--four" />
+        <span className="reference-hero__bottom-bloom" />
         <span className="reference-hero__vignette" />
       </div>
       <div className="reference-hero__content">
@@ -39,7 +40,7 @@ export function ReferenceHero() {
         </h1>
 
         <p className="reference-hero__description">
-          Seu negócio tem uma proposta própria. A Quebre o Padrão transforma isso em{" "}
+          Seu negócio tem uma proposta própria. Rafael Fonseca transforma isso em{" "}
           <strong>páginas de vendas e sites</strong> com mensagem clara, identidade e um caminho até o contato.
         </p>
 
@@ -56,6 +57,11 @@ export function ReferenceHero() {
           <span className="reference-hero__proof-item"><ClockIcon />6 anos no marketing</span>
           <span className="reference-hero__proof-item"><GridIcon />Páginas de vendas e sites</span>
           <span className="reference-hero__proof-item"><UsersIcon />Mais de 50 clientes</span>
+        </div>
+        <div className="reference-hero__bottom-ghost" aria-hidden="true">
+          <span>6 anos no marketing</span>
+          <span>Páginas de vendas e sites</span>
+          <span>Mais de 50 clientes</span>
         </div>
       </div>
     </section>

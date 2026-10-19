@@ -80,14 +80,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Quebre o Padrão · Páginas de vendas e sites" },
+      { title: "Rafael Fonseca · Páginas de vendas e sites" },
       {
         name: "description",
         content:
           "Páginas de vendas e sites com estratégia, copy e design. Há 6 anos no marketing. Projetos de R$ 497 a R$ 1.500, conforme o escopo.",
       },
-      { name: "author", content: "Rafael" },
-      { property: "og:title", content: "Quebre o Padrão · Páginas de vendas e sites" },
+      { name: "author", content: "Rafael Fonseca" },
+      { property: "og:title", content: "Rafael Fonseca · Páginas de vendas e sites" },
       {
         property: "og:description",
         content:
