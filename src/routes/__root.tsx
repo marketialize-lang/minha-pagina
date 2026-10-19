@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import portfolioCss from "../portfolio.css?url";
+import spotlightCss from "../spotlight-hero.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
@@ -108,6 +109,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "stylesheet", href: portfolioCss },
+      { rel: "stylesheet", href: spotlightCss },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),

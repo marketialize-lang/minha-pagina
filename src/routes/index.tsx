@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { initializePortfolio } from "@/lib/portfolio";
+import { SpotlightHero } from "@/components/SpotlightHero";
 
 export const Route = createFileRoute("/")({ component: Index });
 
@@ -39,59 +40,7 @@ function Index() {
         </nav>
       </header>
       <main id="principal">
-        <section className="hero hero-reference" id="inicio">
-          <div className="hero-world" aria-hidden="true">
-            <div className="hero-ambient-light"></div>
-            <div className="light-field">
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-            </div>
-            <div className="hero-floor-glow"></div>
-            {/* The source reference's Spline scene is not licensed/provided.
-                Use the custom light composition until an authorized scene is supplied. */}
-            <div className="spline-wrap" data-spline=""></div>
-          </div>
-          <div className="container hero-inner">
-            <h1 className="hero-headline">
-              <span className="hero-line hero-line--intro">
-                <span className="hero-avatar">
-                  <img src="/assets/rafael-estudio.png" alt="" width="72" height="72" />
-                </span>
-                Uma boa oferta
-              </span>
-              <span className="hero-line hero-line--contrast">merece uma página</span>
-              <span className="hero-line hero-line--final">fora do padrão.</span>
-            </h1>
-            <p className="hero-description">
-              Seu negócio tem uma proposta própria. A Quebre o Padrão transforma isso em{" "}
-              <strong>páginas de vendas e sites</strong> com mensagem clara, identidade e um caminho
-              até o contato.
-            </p>
-            <div className="hero-actions">
-              <a className="btn primary" href="#projetos">
-                Ver projetos <span>↗</span>
-              </a>
-              <a className="btn glass" href="#contato">
-                Iniciar um projeto <span>↗</span>
-              </a>
-            </div>
-            <div className="hero-proof" aria-label="Informações profissionais">
-              <span><b>6 anos</b> no marketing</span>
-              <span>Estratégia · Copy · Design</span>
-              <span>Projetos de <b>R$ 497 a R$ 1.500</b></span>
-            </div>
-          </div>
-          <div className="hero-bottom container">
-            <span>Da primeira impressão à próxima ação.</span>
-            <button className="motion-toggle" aria-pressed="false" aria-label="Pausar animações">
-              <span className="motion-icon">Ⅱ</span>{" "}
-              <span className="motion-label">Pausar movimento</span>
-            </button>
-            <a href="#projetos" className="scroll-cue" aria-label="Rolar para projetos">↓</a>
-          </div>
-        </section>
+        <SpotlightHero />
         <section className="projects section" id="projetos">
           <div className="container">
             <div className="section-top" data-reveal>
