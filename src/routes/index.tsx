@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { KineticHero } from "@/components/KineticHero";
+import { SpotlightHero } from "@/components/SpotlightHero";
 
 export const Route = createFileRoute("/")({ component: Index });
 
@@ -18,7 +18,7 @@ function Index() {
         </nav>
       </header>
       <main id="principal">
-        <KineticHero />
+        <SpotlightHero />
       </main>
     </>
   );
