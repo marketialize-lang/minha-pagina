@@ -648,3 +648,19 @@
 @media (prefers-reduced-motion:reduce) {
   .reference-header__mobile-menu,.reference-header__hamburger i {transition:none;}
 }
+
+/* Menu mobile nativo: sem estado React, sem inert e sem listeners globais. */
+.reference-header__mobile-navigation { display:none; }
+@media (max-width:767px) {
+  .reference-header__mobile-navigation { display:block; margin-left:auto; }
+  .reference-header__mobile-navigation > summary { list-style:none; }
+  .reference-header__mobile-navigation > summary::-webkit-details-marker { display:none; }
+  .reference-header__mobile-navigation[open] .reference-header__hamburger i:first-child { transform:translateY(3.75px) rotate(45deg); }
+  .reference-header__mobile-navigation[open] .reference-header__hamburger i:last-child { transform:translateY(-3.75px) rotate(-45deg); }
+  .reference-header__mobile-navigation[open] .reference-header__mobile-menu {
+    opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;
+  }
+  .reference-header__mobile-navigation > .reference-header__mobile-menu {
+    position:absolute;top:calc(100% - 1px);left:0;right:0;
+  }
+}
