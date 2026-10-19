@@ -2269,3 +2269,118 @@ h3,
 @media (prefers-reduced-motion: reduce) {
   .hero-world .light-field { animation: none; }
 }
+
+
+/* SEÇÃO 01 — composição dedicada à referência Alex Rivera.
+   Mantém identidade e conteúdo do Quebre o Padrão, com iluminação CSS original. */
+.hero-reference {
+  min-height: max(760px, 100svh);
+  padding: 135px 0 120px;
+  background: #000;
+}
+.hero-reference .hero-world { z-index: -1; }
+.hero-reference .hero-world::after {
+  background: linear-gradient(90deg, rgba(0,0,0,.83) 0%,rgba(0,0,0,.33) 48%,rgba(0,0,0,.06) 75%),
+              linear-gradient(180deg,transparent 50%,#000 100%);
+}
+.hero-reference .hero-world::before { display: none; }
+.hero-reference .hero-ambient-light {
+  position: absolute; inset: -12% -7% 0 33%;
+  background: radial-gradient(ellipse at 55% 36%,rgba(111,83,255,.44),transparent 42%),
+              radial-gradient(ellipse at 70% 58%,rgba(21,70,245,.26),transparent 54%);
+  filter: blur(70px);
+}
+.hero-reference .light-field {
+  display: block; opacity: 1; filter: none;
+  padding: 0; inset: -30% -13% -10% 25%;
+  transform: rotate(-39deg);
+  animation: none;
+}
+.hero-reference .light-field i {
+  position: absolute; top: -14%; bottom: -14%; height: auto;
+  width: clamp(86px,11vw,195px);
+  border-radius: 26px; opacity: 1;
+  filter: blur(7px);
+  background: linear-gradient(90deg,
+    transparent 0%, rgba(20,48,179,.16) 14%, rgba(37,86,250,.74) 40%,
+    rgba(125,105,255,.94) 65%,rgba(167,126,255,.54) 80%,transparent 100%);
+  box-shadow: 0 0 70px rgba(49,71,231,.26);
+  transform: none;
+  animation: heroLightPulse 13s ease-in-out infinite alternate;
+}
+.hero-reference .light-field i:nth-child(1) { left: 25%; }
+.hero-reference .light-field i:nth-child(2) { left: 46%; width: clamp(96px,12vw,215px); animation-delay: -4s; }
+.hero-reference .light-field i:nth-child(3) { left: 69%; width: clamp(80px,10vw,170px); animation-delay: -8s; }
+.hero-reference .light-field i:nth-child(4) { left: 89%; width: clamp(60px,8vw,145px); animation-delay: -6s; opacity: .55; }
+.hero-reference .hero-floor-glow {
+  position: absolute; inset: auto -20% -28% 20%; height: 46%;
+  background: radial-gradient(ellipse,rgba(27,77,245,.28),transparent 67%);
+  filter: blur(70px);
+}
+.hero-reference .spline-wrap { display: none; }
+.hero-reference .hero-inner { max-width: 1280px; filter: none; }
+.hero-reference .hero-headline {
+  margin: 0 auto 42px;
+  font-size: clamp(48px,6.67vw,96px);
+  line-height: 1.035;
+  font-weight: 600;
+  letter-spacing: -.052em;
+  text-wrap: nowrap;
+}
+.hero-reference .hero-line { display: flex; align-items: center; justify-content: center; gap: .22em; }
+.hero-reference .hero-line--intro { color: #fff; }
+.hero-reference .hero-line--contrast {
+  display: block; color: transparent;
+  background: linear-gradient(90deg,rgba(255,255,255,.09) 6%,rgba(255,255,255,.42) 45%,#fff 91%);
+  background-clip: text; -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: softUp 1s .23s both;
+}
+.hero-reference .hero-line--final { color: #fff; animation: softUp 1s .36s both; }
+.hero-reference .hero-avatar { width: .88em; height: .88em; border: 2px solid rgba(255,255,255,.23); }
+.hero-reference .hero-description {
+  max-width: 730px; margin: 0 auto 40px; font-size: clamp(16px,1.5vw,20px);
+  line-height: 1.48; color: rgba(255,255,255,.75);
+}
+.hero-reference .hero-actions { gap: 16px; align-items: center; }
+.hero-reference .hero-actions .btn { min-height: 48px; padding: 12px 26px; font-size: 14px; }
+.hero-reference .hero-actions .primary {
+  background: rgba(8,10,14,.78); border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 0 0 1px rgba(255,255,255,.13),inset 0 0 18px rgba(255,255,255,.04),0 10px 40px rgba(0,0,0,.5);
+}
+.hero-reference .hero-actions .glass { background: rgba(255,255,255,.065); }
+.hero-reference .hero-proof { margin-top: 98px; gap: 26px; color: rgba(255,255,255,.57); }
+.hero-reference .hero-bottom { bottom: 24px; }
+@keyframes heroLightPulse {
+  0% { filter: blur(9px) brightness(.77); }
+  100% { filter: blur(13px) brightness(1.16); }
+}
+@media (max-width: 1023px) {
+ .hero-reference { min-height: max(720px,100svh); padding: 132px 0 110px; }
+ .hero-reference .hero-headline { font-size: clamp(42px,6.5vw,72px); }
+ .hero-reference .light-field { inset: -25% -35% -10% 13%; }
+ .hero-reference .hero-proof { margin-top: 68px; }
+}
+@media (max-width: 767px) {
+ .hero-reference { min-height: max(710px,100svh); padding: 125px 0 118px; }
+ .hero-reference .hero-headline { font-size: clamp(27px,7.9vw,52px); letter-spacing: -.048em; margin-bottom: 32px; }
+ .hero-reference .hero-line { gap: .12em; }
+ .hero-reference .hero-avatar { width: .82em; height: .82em; }
+ .hero-reference .hero-world::after {
+   background: linear-gradient(90deg,rgba(0,0,0,.75),rgba(0,0,0,.18) 90%),
+               linear-gradient(180deg,transparent 40%,#000 100%);
+ }
+ .hero-reference .light-field { inset: -30% -120% -20% 10%; transform: rotate(-39deg); }
+ .hero-reference .light-field i { width: 14%; }
+ .hero-reference .light-field i:nth-child(2) { width: 16%; }
+ .hero-reference .light-field i:nth-child(3) { width: 13%; }
+ .hero-reference .hero-description { max-width: 440px; font-size: 15px; line-height: 1.65; margin-bottom: 30px; }
+ .hero-reference .hero-actions { flex-direction: column; gap: 12px; }
+ .hero-reference .hero-actions .btn { width: 100%; max-width: 310px; min-height: 46px; }
+ .hero-reference .hero-proof { margin-top: 48px; gap: 12px; }
+ .hero-reference .hero-bottom { bottom: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+ .hero-reference .light-field i { animation: none; }
+ .hero-reference .hero-line--contrast { animation: none; }
+}
