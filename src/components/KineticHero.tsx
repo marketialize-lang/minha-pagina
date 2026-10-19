@@ -18,23 +18,17 @@ export function KineticHero() {
   }, []);
 
   return (
-    <section className="upw-sec-kinetic" id="inicio" data-forca="1">
+    <section className="upw-sec-kinetic" id="inicio" data-forca="0.38">
       <div className="upw-kn-bg" aria-hidden="true">
         <div className="upw-kn-cols"></div>
         <div className="upw-kn-mq" data-palavra="Padrão"></div>
       </div>
       <div className="upw-kn-in">
-        <div className="upw-kn-top upw-kn-rv">
-          <span className="upw-kn-brand">Quebre o Padrão<b>.</b></span>
-          <span className="upw-kn-meta">ESTRATÉGIA · COPY · DESIGN</span>
-          <span className="upw-kn-live"><span className="upw-kn-dot" aria-hidden="true"></span>6 anos no marketing</span>
-          <span className="upw-kn-geo">PÁGINAS DE VENDAS · SITES</span>
-        </div>
         <div className="upw-kn-stage">
           <div className="upw-kn-field" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
           <h1 className="upw-kn-title">
             <span className="upw-kn-line">Uma boa oferta</span>
-            <span className="upw-kn-line upw-kn-serif upw-kn-indent">merece uma página</span>
+            <span className="upw-kn-line">merece uma página</span>
             <span className="upw-kn-line">fora do <em>padrão.</em></span>
           </h1>
           <p className="upw-kn-note upw-kn-rv" style={{ "--upw-d": ".7s" } as CSSProperties}>
@@ -55,7 +49,7 @@ export function KineticHero() {
           Seu negócio tem uma proposta própria. A Quebre o Padrão transforma isso em <b>páginas de vendas e sites</b> com mensagem clara, identidade e um caminho até o contato.
         </p>
         <div className="upw-kn-act upw-kn-rv" style={{ "--upw-d": ".55s" } as CSSProperties}>
-          <a className="upw-kn-cta" href="#contato">
+          <a className="upw-kn-cta" href="https://wa.me/5521982027149?text=Ol%C3%A1%2C%20Quebre%20o%20Padr%C3%A3o!%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer">
             <span className="upw-kn-cta-t">Quero tirar meu projeto do papel</span>
             <span className="upw-kn-cta-i" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>

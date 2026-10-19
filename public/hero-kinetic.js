@@ -156,7 +156,7 @@ https://app.upwardacademy.com.br/licenca
         else { var kf = 1 - Math.exp(-dt * (near ? 18 : 6)); fx += (tx - fx) * kf; fy += (ty - fy) * kf; }
         amp += (want - amp) * (1 - Math.exp(-dt * (want > amp ? 5 : 2.6)));
         if (!want && amp < .004) amp = 0;
-        var pu = fs * .2 * power, eh = 1 - Math.exp(-dt * 8), busy = amp > 0 || want > 0 || auto; // auto: inclui a espera de 1,5 s
+        var pu = fs * .11 * power, eh = 1 - Math.exp(-dt * 8), busy = amp > 0 || want > 0 || auto; // auto: inclui a espera de 1,5 s
         for (var i = 0; i < letters.length; i++) {
           var L = letters[i], gx = 0, gy = 0, gr = 0, gs = 1, gh = 0;
           if (now < L.rel) { busy = true; continue; }
@@ -165,7 +165,7 @@ https://app.upwardacademy.com.br/licenca
             if (d2 < R * R) {
               var d = Math.sqrt(d2) || 1, f = 1 - d / R;
               f = f * f * (3 - 2 * f) * amp;
-              gx = dx / d * pu * f; gy = dy / d * pu * f * .85; gr = dx / R * 30 * f * power; gs = 1 + .34 * f * power; gh = Math.min(1, Math.max(0, (f - .3) * 3.2));
+              gx = dx / d * pu * f; gy = dy / d * pu * f * .85; gr = dx / R * 12 * f * power; gs = 1 + .12 * f * power; gh = Math.min(1, Math.max(0, (f - .3) * 1.75));
             }
           }
           if (L.ok && gx === L.x && gy === L.y && gr === L.r && gs === L.s && gh === L.h) continue;
@@ -223,17 +223,17 @@ https://app.upwardacademy.com.br/licenca
       function burst(px, py) {
         if (still || !started) return;
         autoUntil = performance.now() + 24000;
-        var reach = fs * 4.2;
+        var reach = fs * 3.2;
         letters.forEach(function (L) {
           var dx = L.cx - px, dy = L.cy - py, d = Math.sqrt(dx * dx + dy * dy) || 1, g = Math.max(.25, 1 - d / reach) * power, j = .7 + Math.random() * .6;
-          L.vx += dx / d * fs * 11 * g * j;
-          L.vy += (dy / d * 11 * j - 3) * fs * g;
-          L.vr += (Math.random() - .5) * 1500 * g;
-          L.vs += 3 * g;
+          L.vx += dx / d * fs * 3.2 * g * j;
+          L.vy += (dy / d * 3.2 * j - .9) * fs * g;
+          L.vr += (Math.random() - .5) * 380 * g;
+          L.vs += .55 * g;
           L.h = Math.min(1, Math.max(L.h, (g - .4) * 2.5));
           L.ok = false;
         });
-        bd.vx += (bcx - px > 0 ? 1 : -1) * 260; bd.vy -= 160;
+        bd.vx += (bcx - px > 0 ? 1 : -1) * 65; bd.vy -= 50;
         wake();
       }
 
@@ -269,7 +269,7 @@ https://app.upwardacademy.com.br/licenca
       measure();
       if (!still) {
         root.classList.add('is-intro');
-        letters.forEach(function (L) { L.y = fs * 1.25; L.r = 8; put(L); });
+        letters.forEach(function (L) { L.y = fs * .55; L.r = 3; put(L); });
       }
       if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { measure(); });
       var mPend = 0;

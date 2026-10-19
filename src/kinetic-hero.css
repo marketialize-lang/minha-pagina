@@ -242,3 +242,98 @@ https://app.upwardacademy.com.br/licenca
  .upw-sec-kinetic .upw-kn-cta { white-space: normal; }
  .upw-sec-kinetic .upw-kn-indent { padding-left: .1em; }
 }
+
+
+/* Correção tipográfica do hero, guiada pelo design system Inter/black/blue/cyan.
+   Todo o restante continua com o layout e efeitos do HTML licenciado. */
+.upw-sec-kinetic {
+  --upw-fs: clamp(30px, 7.6vw, 46px);
+  --upw-pad: clamp(20px, 4.3vw, 48px);
+  min-height: max(690px, 100svh);
+  padding-top: clamp(110px, 11.5vh, 152px);
+  padding-bottom: clamp(32px, 4vh, 48px);
+}
+.upw-sec-kinetic .upw-kn-in {
+  grid-template-areas: "stage" "tools" "sub" "act" "stats";
+  grid-template-rows: auto auto auto auto auto;
+}
+.upw-sec-kinetic .upw-kn-stage {
+  align-self: center;
+  --upw-pt: clamp(14px, 2.4vh, 30px);
+  padding-bottom: clamp(24px, 3vh, 36px);
+}
+.upw-sec-kinetic .upw-kn-title {
+  font-family: var(--font-primary, Inter, sans-serif);
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -.043em;
+  word-spacing: 0;
+}
+.upw-sec-kinetic .upw-kn-line {
+  display: block;
+  white-space: nowrap;
+  font-family: var(--font-primary, Inter, sans-serif);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.18;
+  padding-left: 0;
+}
+.upw-sec-kinetic .upw-kn-title em {
+  font-style: normal;
+  color: var(--color-accent-end, #22d3ee);
+}
+.upw-sec-kinetic .upw-kn-tools {
+  min-height: 58px;
+  border-top: 1px solid rgba(255,255,255,.18);
+}
+.upw-sec-kinetic .upw-kn-sub {
+  max-width: 43ch;
+  margin-top: clamp(20px,3vh,30px);
+  line-height: 1.6;
+  font-size: clamp(15px,1.4vw,18px);
+}
+.upw-sec-kinetic .upw-kn-act { margin-top: clamp(16px,2.4vh,24px); }
+.upw-sec-kinetic .upw-kn-stats { margin-top: clamp(22px,3vh,30px); }
+.upw-sec-kinetic .upw-kn-badge {
+  top: calc(var(--upw-pt) + var(--upw-em) * 1.2);
+}
+.upw-sec-kinetic .upw-kn-mq-l { -webkit-text-stroke: 1px rgba(255,255,255,.065); }
+.upw-sec-kinetic .upw-kn-cols {
+  border-right-color: rgba(255,255,255,.035);
+  background-image: repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 1px,transparent 1px calc(100% / 4));
+}
+@media (min-width: 600px) {
+  .upw-sec-kinetic { --upw-fs: clamp(43px, 6.4vw, 84px); }
+  .upw-sec-kinetic .upw-kn-in {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "stage stage" "tools tools" "sub sub" "act stats";
+  }
+}
+@media (min-width: 900px) {
+  .upw-sec-kinetic { --upw-fs: clamp(60px, 6.5vw, 96px); }
+  .upw-sec-kinetic .upw-kn-in {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, .85fr) minmax(0, 1.2fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "stage stage stage" "tools tools tools" "sub act stats";
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) and (orientation: portrait) {
+  .upw-sec-kinetic { --upw-fs: clamp(43px, 6.4vw, 75px); }
+}
+@media (max-width: 599px) {
+  .upw-sec-kinetic {
+    --upw-fs: clamp(29px, 7.5vw, 46px);
+    padding-top: 108px;
+    padding-bottom: 32px;
+    min-height: 100svh;
+  }
+  .upw-sec-kinetic .upw-kn-title,
+  .upw-sec-kinetic .upw-kn-line { line-height: 1.2; }
+  .upw-sec-kinetic .upw-kn-badge { right: 0; width: 64px; height: 64px; }
+  .upw-sec-kinetic .upw-kn-stats { gap: 0; }
+  .upw-sec-kinetic .upw-kn-stats li { padding-inline: 7px; }
+  .upw-sec-kinetic .upw-kn-stats b { font-size: clamp(18px,5.1vw,25px); }
+  .upw-sec-kinetic .upw-kn-stats span { font-size: 10px; }
+}
