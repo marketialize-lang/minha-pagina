@@ -49,7 +49,7 @@ export function ReferenceHero() {
             Ver portfólio <span aria-hidden="true">↗</span>
           </button>
           <a className="reference-hero__button reference-hero__button--contact" href={WhatsAppLink} target="_blank" rel="noopener noreferrer">
-            Quero tirar meu projeto do papel <span aria-hidden="true">↗</span>
+            <span className="reference-hero__cta-long">Quero tirar meu projeto do papel</span><span className="reference-hero__cta-short">Iniciar projeto</span> <span className="reference-hero__cta-arrow" aria-hidden="true">↗</span>
           </a>
         </div>
 
@@ -57,11 +57,6 @@ export function ReferenceHero() {
           <span className="reference-hero__proof-item"><ClockIcon />6 anos no marketing</span>
           <span className="reference-hero__proof-item"><GridIcon />Páginas de vendas e sites</span>
           <span className="reference-hero__proof-item"><UsersIcon />Mais de 50 clientes</span>
-        </div>
-        <div className="reference-hero__bottom-ghost" aria-hidden="true">
-          <span>6 anos no marketing</span>
-          <span>Páginas de vendas e sites</span>
-          <span>Mais de 50 clientes</span>
         </div>
       </div>
     </section>
