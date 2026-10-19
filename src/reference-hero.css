@@ -664,3 +664,60 @@
     position:absolute;top:calc(100% - 1px);left:0;right:0;
   }
 }
+
+
+/* FOTO DO HERO — referência visual Alex Rivera, comparativo mobile 19/10.
+   Usa exclusivamente a foto já existente de Rafael; não substitui identidade. */
+.reference-hero__avatar {
+  width: clamp(68px, 5.8vw, 84px);
+  height: clamp(68px, 5.8vw, 84px);
+  flex: none;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.25);
+  background: #050505;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.05),
+    inset 0 0 10px rgba(0,0,0,.55),
+    0 0 22px rgba(0,0,0,.5);
+}
+.reference-hero__avatar::after {
+  inset: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 51% 43%, transparent 0 34%,rgba(0,0,0,.12) 63%,rgba(0,0,0,.60) 100%),
+    linear-gradient(90deg,rgba(0,0,0,.16),transparent 55%,rgba(0,0,0,.06));
+}
+.reference-hero__avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 16%;
+  /* Face enlarged and re-centered to avoid showing only clothing/chest */
+  transform: scale(2.65) translateY(7%);
+  transform-origin: 50% 16%;
+  filter: grayscale(1) saturate(0) brightness(.92) contrast(1.07);
+  image-rendering: auto;
+}
+@media (max-width: 1023px) {
+  .reference-hero__avatar {
+    width: clamp(44px, 5.3vw, 56px);
+    height: clamp(44px, 5.3vw, 56px);
+  }
+}
+@media (max-width: 767px) {
+  .reference-hero__line--first { align-items: center; }
+  .reference-hero__avatar {
+    width: clamp(38px, 10vw, 43px);
+    height: clamp(38px, 10vw, 43px);
+    border-width: 1px;
+  }
+  .reference-hero__avatar img {
+    object-position: 50% 13%;
+    transform: scale(2.75) translateY(8%);
+    transform-origin: 50% 14%;
+    filter: grayscale(1) saturate(0) brightness(.96) contrast(1.04);
+  }
+}
