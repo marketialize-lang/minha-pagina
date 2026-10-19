@@ -2384,3 +2384,14 @@ h3,
  .hero-reference .light-field i { animation: none; }
  .hero-reference .hero-line--contrast { animation: none; }
 }
+
+
+/* Cabeçalho e tipografia-base conforme design-system-meu-portifolio(2).html */
+body { line-height: var(--leading-body, 1.5); }
+.header { background: rgba(0,0,0,.8); border-bottom: 1px solid var(--color-border); }
+.nav { height: 80px; }
+.brand { font-size: 20px; letter-spacing: var(--tracking-tight,-.025em); }
+.brand-dot { color: var(--color-accent-end,#22d3ee); }
+.nav-cta { font-size: var(--text-sm,14px); font-weight: var(--font-medium,500); }
+::selection { background: var(--color-selection-bg,rgba(139,92,246,.2)); color: var(--color-text,#fff); }
+@media (max-width: 767px) { .nav { height: 72px; } .brand { font-size: 18px; } .nav-cta { font-size: 12px; } }

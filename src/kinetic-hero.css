@@ -208,132 +208,198 @@ https://app.upwardacademy.com.br/licenca
     .upw-sec-kinetic.upw-js .upw-kn-rv, .upw-sec-kinetic.upw-js .upw-kn-badge.upw-kn-rv { translate: none; scale: none; rotate: none; transition: opacity .5s ease; }
   }
 
-/* Ajustes exclusivamente para o conteúdo verificado e o design system Quebre o Padrão. */
-.upw-sec-kinetic { padding-top: clamp(118px, 12vh, 150px); }
-.upw-sec-kinetic .upw-kn-brand { font-weight: 600; }
-.upw-sec-kinetic .upw-kn-title { font-weight: 600; }
-.upw-sec-kinetic .upw-kn-badge-ring { fill: var(--upw-bg); }
-.upw-sec-kinetic .upw-kn-title em { color: var(--color-accent-end, #22d3ee); }
-.upw-sec-kinetic .upw-kn-ch.upw-kn-em { --upw-c: var(--color-accent-end, #22d3ee); --upw-hot: var(--upw-ink); }
-.upw-sec-kinetic .upw-kn-cta,
-.upw-sec-kinetic .upw-kn-cta:visited,
-.upw-sec-kinetic .upw-kn-cta:focus,
-.upw-sec-kinetic .upw-kn-cta:hover {
-  background: var(--gradient-cta, linear-gradient(90deg,#60a5fa,#22d3ee));
-  color: #00101b;
-  box-shadow: 0 10px 36px rgba(34,211,238,.14);
-}
-.upw-sec-kinetic .upw-kn-cta:hover, .upw-sec-kinetic .upw-kn-cta:focus-visible {
-  box-shadow: var(--shadow-glow);
-}
-.upw-sec-kinetic .upw-kn-cta-i { background: rgba(0,0,0,.15); color: #00101b; }
-.upw-sec-kinetic .upw-kn-cta:hover .upw-kn-cta-i { background: #00101b; color: #fff; }
-.upw-sec-kinetic .upw-kn-note { color: var(--upw-muted); }
-.upw-sec-kinetic .upw-kn-indent { padding-left: .16em; }
-.upw-sec-kinetic .upw-kn-stats { gap: 8px; }
-.upw-sec-kinetic .upw-kn-stats b { font-weight: 600; }
-.upw-sec-kinetic .upw-kn-mq-l { -webkit-text-stroke: 1.5px rgba(255,255,255,.12); }
-@media (min-width: 600px) {
- .upw-sec-kinetic { --upw-fs: clamp(58px, min(10vw, 16vh), 135px); }
- .upw-sec-kinetic .upw-kn-indent { padding-left: .16em; }
-}
-@media (max-width: 599px) {
- .upw-sec-kinetic { padding-top: 112px; --upw-fs: clamp(39px, 14vw, 70px); }
- .upw-sec-kinetic .upw-kn-cta { white-space: normal; }
- .upw-sec-kinetic .upw-kn-indent { padding-left: .1em; }
-}
 
-
-/* Correção tipográfica do hero, guiada pelo design system Inter/black/blue/cyan.
-   Todo o restante continua com o layout e efeitos do HTML licenciado. */
+/*
+  Identidade da primeira dobra, auditada com
+  "design-system-meu-portifolio(2).html".
+  Preserva o funcionamento do Hero Tipografia Magnética licenciado.
+*/
 .upw-sec-kinetic {
-  --upw-fs: clamp(30px, 7.6vw, 46px);
-  --upw-pad: clamp(20px, 4.3vw, 48px);
+  --upw-bg: var(--color-background, #000000);
+  --upw-ink: var(--color-text, #ffffff);
+  --upw-muted: var(--color-text-muted, rgba(255,255,255,.60));
+  --upw-accent: var(--color-accent, #60a5fa);
+  --upw-line: var(--color-border, rgba(255,255,255,.10));
+  --upw-sans: var(--font-primary, "Inter", ui-sans-serif, system-ui, sans-serif);
+  --upw-serif: var(--font-primary, "Inter", ui-sans-serif, system-ui, sans-serif);
+  --upw-mono: var(--font-primary, "Inter", ui-sans-serif, system-ui, sans-serif);
+  --upw-pad: 24px;
+  --upw-fs: 10vw;
   min-height: max(690px, 100svh);
-  padding-top: clamp(110px, 11.5vh, 152px);
-  padding-bottom: clamp(32px, 4vh, 48px);
+  padding-top: clamp(110px, 12vh, 152px);
+  padding-bottom: 48px;
+  background: var(--color-background, #000);
+  color: var(--color-text, #fff);
+  font: 400 16px/1.5 var(--font-primary, "Inter", sans-serif);
 }
 .upw-sec-kinetic .upw-kn-in {
+  max-width: var(--container-max, 1280px);
   grid-template-areas: "stage" "tools" "sub" "act" "stats";
   grid-template-rows: auto auto auto auto auto;
 }
 .upw-sec-kinetic .upw-kn-stage {
   align-self: center;
-  --upw-pt: clamp(14px, 2.4vh, 30px);
-  padding-bottom: clamp(24px, 3vh, 36px);
+  --upw-pt: 24px;
+  padding-bottom: 32px;
 }
 .upw-sec-kinetic .upw-kn-title {
-  font-family: var(--font-primary, Inter, sans-serif);
-  font-size: 1em;
-  font-weight: 600;
-  line-height: 1.18;
-  letter-spacing: -.043em;
+  font: 600 1em/1.03 var(--font-primary, "Inter", sans-serif);
+  letter-spacing: var(--tracking-tight, -.025em);
   word-spacing: 0;
+  text-transform: none;
 }
 .upw-sec-kinetic .upw-kn-line {
   display: block;
-  white-space: nowrap;
-  font-family: var(--font-primary, Inter, sans-serif);
+  padding-left: 0;
+  font-family: var(--font-primary, "Inter", sans-serif);
+  font-size: inherit;
   font-style: normal;
   font-weight: 600;
-  line-height: 1.18;
-  padding-left: 0;
+  line-height: 1.03;
+  letter-spacing: inherit;
+  text-transform: none;
+  white-space: nowrap;
 }
 .upw-sec-kinetic .upw-kn-title em {
   font-style: normal;
   color: var(--color-accent-end, #22d3ee);
 }
-.upw-sec-kinetic .upw-kn-tools {
-  min-height: 58px;
-  border-top: 1px solid rgba(255,255,255,.18);
+.upw-sec-kinetic .upw-kn-ch.upw-kn-em {
+  --upw-c: var(--color-accent-end, #22d3ee);
+  --upw-hot: var(--upw-ink);
 }
-.upw-sec-kinetic .upw-kn-sub {
-  max-width: 43ch;
-  margin-top: clamp(20px,3vh,30px);
-  line-height: 1.6;
-  font-size: clamp(15px,1.4vw,18px);
+.upw-sec-kinetic .upw-kn-note,
+.upw-sec-kinetic .upw-kn-hint,
+.upw-sec-kinetic .upw-kn-when,
+.upw-sec-kinetic .upw-kn-btn,
+.upw-sec-kinetic .upw-kn-mark b {
+  font-family: var(--font-primary, "Inter", sans-serif);
 }
-.upw-sec-kinetic .upw-kn-act { margin-top: clamp(16px,2.4vh,24px); }
-.upw-sec-kinetic .upw-kn-stats { margin-top: clamp(22px,3vh,30px); }
-.upw-sec-kinetic .upw-kn-badge {
-  top: calc(var(--upw-pt) + var(--upw-em) * 1.2);
+.upw-sec-kinetic .upw-kn-note { color: var(--color-text-muted, rgba(255,255,255,.6)); }
+.upw-sec-kinetic .upw-kn-hint { font-size: var(--text-micro, 11px); }
+.upw-sec-kinetic .upw-kn-when {
+  font-size: var(--text-xs, 12px);
+  font-weight: 500;
+  line-height: var(--leading-body, 1.5);
 }
-.upw-sec-kinetic .upw-kn-mq-l { -webkit-text-stroke: 1px rgba(255,255,255,.065); }
+.upw-sec-kinetic .upw-kn-btn,
+.upw-sec-kinetic .upw-kn-btn:hover,
+.upw-sec-kinetic .upw-kn-btn:focus {
+  font-family: var(--font-primary, "Inter", sans-serif);
+  font-size: var(--text-xs, 12px);
+  font-weight: 500;
+  border-color: var(--color-border, rgba(255,255,255,.1));
+}
+.upw-sec-kinetic .upw-kn-btn:focus-visible,
+.upw-sec-kinetic .upw-kn-cta:focus-visible {
+  outline: 2px solid var(--color-accent-end, #22d3ee);
+  outline-offset: 4px;
+}
+.upw-sec-kinetic .upw-kn-badge-ring {
+  fill: var(--upw-bg);
+  font-weight: 600;
+}
+.upw-sec-kinetic .upw-kn-mq-l {
+  -webkit-text-stroke: 1px rgba(255,255,255,.065);
+}
 .upw-sec-kinetic .upw-kn-cols {
   border-right-color: rgba(255,255,255,.035);
-  background-image: repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 1px,transparent 1px calc(100% / 4));
+  background-image: repeating-linear-gradient(90deg, rgba(255,255,255,.035) 0 1px, transparent 1px calc(100% / 4));
+}
+.upw-sec-kinetic .upw-kn-tools {
+  min-height: 56px;
+  border-top: 1px solid var(--color-border, rgba(255,255,255,.1));
+}
+.upw-sec-kinetic .upw-kn-sub {
+  max-width: 650px;
+  margin-top: 24px;
+  font-size: var(--text-xl, 20px);
+  line-height: var(--leading-body, 1.5);
+  color: var(--color-text-secondary, rgba(255,255,255,.8));
+}
+.upw-sec-kinetic .upw-kn-sub b {
+  font-weight: 600;
+  color: var(--color-text, #fff);
+}
+.upw-sec-kinetic .upw-kn-act { margin-top: 24px; }
+.upw-sec-kinetic .upw-kn-stats {
+  margin-top: 24px;
+  gap: 8px;
+}
+.upw-sec-kinetic .upw-kn-stats b {
+  font-size: clamp(24px,2.5vw,30px);
+  font-weight: var(--font-semibold, 600);
+  letter-spacing: var(--tracking-tight, -.025em);
+}
+.upw-sec-kinetic .upw-kn-stats small { font-weight: var(--font-medium,500); }
+.upw-sec-kinetic .upw-kn-stats span {
+  font-size: var(--text-xs,12px);
+  color: var(--color-text-muted, rgba(255,255,255,.6));
+}
+.upw-sec-kinetic .upw-kn-cta,
+.upw-sec-kinetic .upw-kn-cta:visited,
+.upw-sec-kinetic .upw-kn-cta:focus,
+.upw-sec-kinetic .upw-kn-cta:hover {
+  min-height: 48px;
+  padding: 6px 6px 6px 24px;
+  border-radius: var(--radius-full, 9999px);
+  background: var(--gradient-cta, linear-gradient(to right,#60a5fa,#22d3ee));
+  color: #000;
+  font: 600 14px/20px var(--font-primary, "Inter", sans-serif);
+  letter-spacing: 0;
+  box-shadow: var(--shadow-ring, 0 0 0 1px rgba(255,255,255,.2));
+}
+.upw-sec-kinetic .upw-kn-cta:hover,
+.upw-sec-kinetic .upw-kn-cta:focus-visible {
+  background: var(--gradient-cta, linear-gradient(to right,#60a5fa,#22d3ee));
+  color: #000;
+  box-shadow: var(--shadow-glow, 0 18px 60px rgba(56,189,248,.25));
+}
+.upw-sec-kinetic .upw-kn-cta-i {
+  width: 36px;
+  height: 36px;
+  background: rgba(0,0,0,.11);
+  color: #000;
+}
+.upw-sec-kinetic .upw-kn-cta:hover .upw-kn-cta-i {
+  background: #000;
+  color: #fff;
 }
 @media (min-width: 600px) {
-  .upw-sec-kinetic { --upw-fs: clamp(43px, 6.4vw, 84px); }
   .upw-sec-kinetic .upw-kn-in {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
     grid-template-rows: auto auto auto auto;
     grid-template-areas: "stage stage" "tools tools" "sub sub" "act stats";
+    column-gap: 32px;
   }
 }
+@media (min-width: 640px) {
+  .upw-sec-kinetic { --upw-fs: 72px; }
+}
 @media (min-width: 900px) {
-  .upw-sec-kinetic { --upw-fs: clamp(60px, 6.5vw, 96px); }
   .upw-sec-kinetic .upw-kn-in {
     grid-template-columns: minmax(0, 1.05fr) minmax(0, .85fr) minmax(0, 1.2fr);
     grid-template-rows: auto auto auto;
     grid-template-areas: "stage stage stage" "tools tools tools" "sub act stats";
+    column-gap: 32px;
   }
 }
-@media (min-width: 600px) and (max-width: 899px) and (orientation: portrait) {
-  .upw-sec-kinetic { --upw-fs: clamp(43px, 6.4vw, 75px); }
+@media (min-width: 1024px) {
+  .upw-sec-kinetic { --upw-fs: 96px; --upw-pad: 32px; }
 }
-@media (max-width: 599px) {
-  .upw-sec-kinetic {
-    --upw-fs: clamp(29px, 7.5vw, 46px);
-    padding-top: 108px;
-    padding-bottom: 32px;
-    min-height: 100svh;
-  }
-  .upw-sec-kinetic .upw-kn-title,
-  .upw-sec-kinetic .upw-kn-line { line-height: 1.2; }
-  .upw-sec-kinetic .upw-kn-badge { right: 0; width: 64px; height: 64px; }
+@media (max-width: 639px) {
+  .upw-sec-kinetic { --upw-fs: 10vw; }
+  .upw-sec-kinetic .upw-kn-line { white-space: normal; }
+  .upw-sec-kinetic .upw-kn-sub { font-size: var(--text-lg,18px); }
   .upw-sec-kinetic .upw-kn-stats { gap: 0; }
   .upw-sec-kinetic .upw-kn-stats li { padding-inline: 7px; }
-  .upw-sec-kinetic .upw-kn-stats b { font-size: clamp(18px,5.1vw,25px); }
-  .upw-sec-kinetic .upw-kn-stats span { font-size: 10px; }
+  .upw-sec-kinetic .upw-kn-stats b { font-size: clamp(18px, 5.1vw, 25px); }
+  .upw-sec-kinetic .upw-kn-stats span { font-size: var(--text-micro,11px); }
+}
+@media (max-width: 599px) {
+  .upw-sec-kinetic .upw-kn-badge { width: 64px; height: 64px; right: 0; }
+  .upw-sec-kinetic .upw-kn-cta { white-space: normal; text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .upw-sec-kinetic .upw-kn-ch { will-change: auto; }
 }
