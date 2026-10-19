@@ -21,7 +21,8 @@ function Index() {
             <a href="#projetos">Projetos</a>
             <a href="#abordagem">A abordagem</a>
             <a href="#servicos">Serviços</a>
-            <a href="#investimento">Investimento</a>
+            <a href="#processo">Processo</a>
+            <a href="#contato">Contato</a>
           </div>
           <a className="btn glass nav-cta" href="#contato">
             Vamos conversar <span>↗</span>
@@ -665,7 +666,8 @@ function Index() {
         <section className="contact section" id="contato">
           <div className="contact-light" aria-hidden="true"></div>
           <div className="container contact-inner">
-            <span className="pill">Vamos dar o próximo passo</span>
+            <div className="contact-action-card" data-reveal>
+              <span className="pill">Vamos dar o próximo passo</span>
             <h2>
               Vamos tirar sua ideia
               <br />
@@ -675,6 +677,21 @@ function Index() {
               Me conte o que você vende, para quem e o que precisa criar. A partir disso, alinhamos
               o formato e o investimento.
             </p>
+              <div className="contact-direct-actions">
+                <a className="btn primary" href="https://wa.me/5521982027149?text=Ol%C3%A1%2C%20Quebre%20o%20Padr%C3%A3o!%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer">
+                  Conversar no WhatsApp <span>↗</span>
+                </a>
+                <a className="btn glass" href="#brief-form">Enviar briefing <span>↓</span></a>
+              </div>
+              <div className="contact-social-line">
+                <span>Uma ideia boa merece sair do papel.</span>
+                <a href="https://www.instagram.com/quebradepadrao.oficial/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+              </div>
+            </div>
+            <div className="brief-intro">
+              <span className="eyebrow">OU CONTE A SUA IDEIA</span>
+              <p>Prefere explicar o que precisa? Preencha o resumo e continue a conversa pelo WhatsApp.</p>
+            </div>
             <form id="brief-form" className="brief-form">
               <div className="form-grid">
                 <label>
@@ -724,19 +741,41 @@ function Index() {
           </div>
         </section>
       </main>
-      <footer className="container footer">
-        <a className="brand" href="#inicio">
-          <span>Quebre o Padrão</span>
-          <span className="brand-dot">.</span>
-        </a>
-        <span>Uma mensagem própria. Uma presença à altura.</span>
-        <a href="https://www.instagram.com/quebradepadrao.oficial/" target="_blank" rel="noopener">
-          Instagram ↗
-        </a>
-        <a href="#inicio">Voltar ao topo ↑</a>
-        <small>
-          © <span id="year">2026</span> <span>Quebre o Padrão</span>. Todos os direitos reservados.
-        </small>
+      <footer className="footer">
+        <div className="container footer-grid">
+          <div className="footer-brand-col">
+            <a className="brand" href="#inicio" aria-label="Quebre o Padrão — voltar ao início">
+              <span>Quebre o Padrão</span><span className="brand-dot">.</span>
+            </a>
+            <p>Estratégia, copy e design para marcas que querem uma presença própria.</p>
+            <a className="footer-social" href="https://www.instagram.com/quebradepadrao.oficial/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+          </div>
+          <div className="footer-col">
+            <h3>Navegação</h3>
+            <a href="#projetos">Projetos</a>
+            <a href="#abordagem">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#processo">Processo</a>
+            <a href="#contato">Contato</a>
+          </div>
+          <div className="footer-col">
+            <h3>Serviços</h3>
+            <a href="#contato" data-service="Página de vendas">Páginas de vendas</a>
+            <a href="#contato" data-service="Site profissional">Sites profissionais</a>
+            <a href="#contato" data-service="Página com criação da copy">Copywriting</a>
+            <a href="#investimento">Investimento</a>
+          </div>
+          <div className="footer-col footer-contact">
+            <h3>Vamos conversar</h3>
+            <p>Tem um projeto em mente? Conte sua ideia e vamos encontrar o formato certo.</p>
+            <a href="https://wa.me/5521982027149?text=Ol%C3%A1%2C%20Quebre%20o%20Padr%C3%A3o!%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+            <a className="footer-contact-link" href="#brief-form">Enviar briefing <span>→</span></a>
+          </div>
+        </div>
+        <div className="container footer-bottom">
+          <small>© 2026 Quebre o Padrão. Todos os direitos reservados.</small>
+          <a href="#inicio">Voltar ao topo ↑</a>
+        </div>
       </footer>
       <div className="toast" role="status" hidden></div>
     </>
