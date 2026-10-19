@@ -110,6 +110,7 @@ export function initializePortfolio() {
   const mountSpline = () => {
     if (
       frame ||
+      !splineWrap.dataset["spline"] ||
       reduced.matches ||
       paused ||
       document.hidden ||
