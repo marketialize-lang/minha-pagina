@@ -160,7 +160,6 @@ export function initializePortfolio() {
     controller.abort();
     observers.forEach((observer) => observer.disconnect());
     timers.forEach(window.clearTimeout);
-    removeSpline();
     document.documentElement.classList.remove("reveal-enabled");
     document.body.classList.remove("motion-paused", "menu-open");
   };
