@@ -1,10 +1,9 @@
 /**
- * Hero editorial Rafael Fonseca: foto do usuário com fundo transparente,
- * profundidade em camadas (QUEBRE atrás / PADRÃO à frente).
- * Mantém o design system Inter, preto, azul, ciano e violeta.
+ * Primeira dobra do portfólio de Rafael Fonseca.
+ * Camadas inspiradas na referência fornecida pelo usuário:
+ * tipografia monumental, foto real em primeiro plano e copy editorial.
  */
-const WhatsAppLink =
-  "https://wa.me/5521982027149?text=Ol%C3%A1%2C%20Rafael%20Fonseca!%20Quero%20conversar%20sobre%20um%20projeto.";
+const WhatsAppLink = "https://wa.me/5521982027149?text=Ol%C3%A1%2C%20Rafael%20Fonseca!%20Quero%20conversar%20sobre%20um%20projeto.";
 
 function ClockIcon() {
   return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>;
@@ -28,22 +27,22 @@ export function ReferenceHero() {
         <span className="reference-hero__bottom-bloom" />
         <span className="reference-hero__vignette" />
       </div>
-
-      <div className="editorial-hero__wrap">
-        <div className="editorial-hero__art" aria-label="Foto de Rafael Fonseca">
+      <div className="editorial-hero__stage">
+        <div className="editorial-hero__art">
           <span className="editorial-hero__rear-word" aria-hidden="true">QUEBRE</span>
-          <div className="editorial-hero__halo" aria-hidden="true" />
+          <span className="editorial-hero__halo" aria-hidden="true"/>
           <img
             className="editorial-hero__portrait"
             src="/assets/rafael-hero-cutout.webp"
-            alt="Rafael Fonseca de óculos escuros, em retrato com iluminação cinematográfica"
             width="941"
             height="1672"
+            alt="Retrato de Rafael Fonseca usando óculos escuros, com iluminação cinematográfica"
             loading="eager"
             fetchPriority="high"
           />
           <span className="editorial-hero__front-word" aria-hidden="true">PADRÃO</span>
         </div>
+
         <div className="editorial-hero__copy">
           <p className="editorial-hero__eyebrow">ESTRATÉGIA <span aria-hidden="true">×</span> DESIGN <span aria-hidden="true">×</span> RESULTADOS</p>
           <h1 className="editorial-hero__title" id="reference-hero-title">
@@ -64,15 +63,14 @@ export function ReferenceHero() {
               <span aria-hidden="true">↗</span>
             </a>
           </div>
-          <div className="editorial-hero__proof" aria-label="Informações sobre o trabalho">
-            <span className="editorial-hero__proof-item"><span className="editorial-hero__proof-icon"><ClockIcon /></span>6 anos de experiência</span>
-            <span className="editorial-hero__proof-item"><span className="editorial-hero__proof-icon"><GridIcon /></span>Páginas de vendas e sites</span>
-            <span className="editorial-hero__proof-item"><span className="editorial-hero__proof-icon"><UsersIcon /></span>Mais de 50 clientes</span>
-          </div>
         </div>
-
+        <div className="editorial-hero__proof" aria-label="Informações sobre o trabalho">
+          <span className="editorial-hero__proof-item"><span className="editorial-hero__proof-icon"><ClockIcon /></span><span>6 anos de experiência</span></span>
+          <span className="editorial-hero__proof-item"><span className="editorial-hero__proof-icon"><GridIcon /></span><span>Páginas de vendas e sites</span></span>
+          <span className="editorial-hero__proof-item"><span className="editorial-hero__proof-icon"><UsersIcon /></span><span>Mais de 50 clientes</span></span>
+        </div>
       </div>
-      <div className="editorial-hero__footer-blur" aria-hidden="true" />
+      <div className="editorial-hero__footer-blur" aria-hidden="true"/>
     </section>
   );
 }
