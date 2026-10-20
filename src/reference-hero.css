@@ -690,108 +690,73 @@
 @media(max-width:1023px){.reference-hero__avatar{width:70px;height:70px}}
 @media(max-width:639px){.reference-hero__avatar{width:10vw;height:10vw}}
 
-/* Hero typography audited against computed styles of 3d-artist.aura.build.
-   The original h1 is 16px and passes its -.025em tracking as -.4px to spans. */
+/* HERO 01 — Tipografia auditada no design-system-meu-portifolio(4).html
+   Fonte Inter, peso 600, entrelinha 1, tracking computado -0.4px.
+   Escala exata: 10vw mobile, 72px tablet e 96px desktop.
+   Esta é a única definição final das regras tipográficas do hero,
+   substituindo os dois blocos de overrides anteriores. */
 .reference-hero .reference-hero__title {
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  font-size:10vw;
-  font-weight:600;
-  font-style:normal;
-  line-height:1;
-  letter-spacing:-.4px;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 10vw;
+  line-height: 1;
+  letter-spacing: -.4px;
+  font-synthesis: none;
+  font-kerning: normal;
+  max-width: 1100px;
 }
 .reference-hero .reference-hero__line {
-  font-size:inherit;
-  font-weight:inherit;
-  line-height:1;
-  letter-spacing:inherit;
-  text-wrap:wrap;
-  white-space:normal;
-}
-.reference-hero .reference-hero__line--first { gap:16px; }
-.reference-hero .reference-hero__line--fade {
-  background:none;
-  color:rgba(255,255,255,.8);
-  -webkit-text-fill-color:currentColor;
-  mask:linear-gradient(90deg,transparent 0,#000 20%,#000 80%,transparent 220%) 0 0/200% 100% repeat;
-  animation:hero-reference-shimmer 2.8s ease-in-out 1s both;
-}
-@keyframes hero-reference-shimmer { to { mask-position:200% 0; } }
-@media(min-width:640px){
-  .reference-hero .reference-hero__title{font-size:72px}
-  .reference-hero .reference-hero__line--first{gap:24px}
-}
-@media(min-width:1024px){.reference-hero .reference-hero__title{font-size:96px}}
-@media(prefers-reduced-motion:reduce){.reference-hero .reference-hero__line--fade{animation:none;mask:none}}
-
-
-/* Auditoria final da tipografia do hero — valores computados do design system
-   enviado em 20/10/2026: Inter 600, entrelinha 1, tracking fixo -0.4px.
-   Preserva a copy atual e os tamanhos auditados: 10vw / 72px / 96px. */
-.reference-hero .reference-hero__title {
-  font-family: "Inter",ui-sans-serif,system-ui,sans-serif;
-  font-weight:600;
-  font-style:normal;
-  font-size:10vw;
-  line-height:1;
-  letter-spacing:-.4px;
-  font-synthesis:none;
-  font-kerning:normal;
-}
-.reference-hero .reference-hero__line {
-  display:block;
-  font-family:inherit;
-  font-size:inherit;
-  font-weight:inherit;
-  font-style:inherit;
-  line-height:1;
-  letter-spacing:inherit;
-  white-space:nowrap;
-  text-wrap:nowrap;
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: 1;
+  letter-spacing: inherit;
+  text-transform: none;
+  white-space: nowrap;
+  text-wrap: nowrap;
 }
 .reference-hero .reference-hero__line--first {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:clamp(8px,1.2vw,16px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(8px, 1.2vw, 16px);
 }
 .reference-hero .reference-hero__line--first > span:last-child {
-  font:inherit;
-  letter-spacing:inherit;
-  white-space:nowrap;
+  font: inherit;
+  letter-spacing: inherit;
+  white-space: nowrap;
 }
-/* O texto da segunda linha não deve desaparecer durante o shimmer:
-   manter o degradê estático escuro → branco como na imagem da referência. */
 .reference-hero .reference-hero__line--fade {
-  background-image:linear-gradient(90deg,
+  color: transparent;
+  background: linear-gradient(90deg,
     rgba(255,255,255,.13) 0%,
     rgba(255,255,255,.40) 28%,
     rgba(255,255,255,.77) 63%,
     rgba(255,255,255,.98) 100%);
-  background-clip:text;
-  -webkit-background-clip:text;
-  color:transparent;
-  -webkit-text-fill-color:transparent;
-  -webkit-mask:none;
-  mask:none;
-  animation:reference-title-up 1s .11s both;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-mask: none;
+  mask: none;
+  animation: reference-title-up 1s .11s both;
 }
-@media (min-width:640px) {
-  .reference-hero .reference-hero__title { font-size:72px; }
-  .reference-hero .reference-hero__line--first { gap:clamp(8px,1.2vw,16px); }
+@media (min-width: 640px) {
+  .reference-hero .reference-hero__title { font-size: 72px; }
 }
-@media (min-width:1024px) {
-  .reference-hero .reference-hero__title { font-size:96px; }
+@media (min-width: 1024px) {
+  .reference-hero .reference-hero__title { font-size: 96px; }
 }
-@media (min-width:640px) and (max-width:767px) {
-  /* A foto deve dividir a primeira linha com o título, não forçar uma quebra. */
-  .reference-hero__avatar { width:50px; height:50px; }
-  .reference-hero .reference-hero__line--first { gap:8px; }
+@media (min-width: 640px) and (max-width: 767px) {
+  .reference-hero .reference-hero__line--first { gap: 8px; }
+  .reference-hero__avatar { width: 50px; height: 50px; }
 }
-@media (max-width:639px) {
-  .reference-hero .reference-hero__title { font-size:10vw; }
-  .reference-hero .reference-hero__line--first { gap:8px; }
+@media (max-width: 639px) {
+  .reference-hero .reference-hero__title { font-size: 10vw; }
+  .reference-hero .reference-hero__line--first { gap: 8px; }
 }
-@media (prefers-reduced-motion:reduce) {
-  .reference-hero .reference-hero__line--fade { animation:none; }
+@media (prefers-reduced-motion: reduce) {
+  .reference-hero .reference-hero__line--fade { animation: none; }
 }
