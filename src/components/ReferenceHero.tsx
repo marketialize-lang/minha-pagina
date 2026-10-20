@@ -31,7 +31,7 @@ export function ReferenceHero() {
         <h1 className="reference-hero__title" id="reference-hero-title">
           <span className="reference-hero__line reference-hero__line--first">
             <span className="reference-hero__avatar">
-              <img src="/assets/rafael-estudio.png" alt="" width="76" height="76" loading="eager" fetchPriority="high" />
+              <img src="/assets/rafael-hero-monocromatico.png" alt="" width="90" height="90" loading="eager" fetchPriority="high" />
             </span>
             <span>Uma boa oferta</span>
           </span>
