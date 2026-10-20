@@ -1101,3 +1101,164 @@
 @media (prefers-reduced-motion:reduce) {
   .editorial-hero__button {transition:none}
 }
+
+
+/* Hero 01, mobile: QUEBRE / foto / PADRÃO acima da copy, sem recortes.
+   O layout desktop continua em duas colunas; imagem e textos são elementos
+   reais e responsivos, não um screenshot do design. */
+.reference-hero.reference-hero--editorial {
+  padding-bottom:64px;
+}
+.editorial-hero__copy {grid-column:1;grid-row:1}
+.editorial-hero__art {
+  grid-column:2;
+  grid-row:1;
+  height:620px;
+  min-height:0;
+  width:100%;
+  min-width:0;
+  overflow:visible;
+  isolation:isolate;
+}
+.editorial-hero__rear-word,.editorial-hero__front-word {
+  left:0;
+  transform:none;
+  width:100%;
+  display:block;
+  text-align:center;
+  white-space:nowrap;
+  letter-spacing:-.075em;
+  line-height:.92;
+}
+.editorial-hero__rear-word {
+  top:17%;
+  font-size:clamp(70px,8.6vw,125px);
+}
+.editorial-hero__front-word {
+  bottom:9%;
+  font-size:clamp(70px,8.5vw,124px);
+}
+.editorial-hero__portrait {
+  bottom:0;
+  right:3%;
+  height:100%;
+  width:auto;
+  max-width:100%;
+  object-fit:contain;
+  object-position:center bottom;
+}
+.editorial-hero__halo {
+  inset:18% 4% 10%;
+  filter:blur(35px);
+}
+.editorial-hero__title {
+  font-size:clamp(35px,3.85vw,62px);
+  letter-spacing:-.4px;
+  line-height:1.045;
+}
+.editorial-hero__description {margin-top:24px;max-width:490px}
+.editorial-hero__proof {margin-top:45px}
+@media (max-width:1179px) and (min-width:769px) {
+  .editorial-hero__title {font-size:clamp(34px,3.65vw,46px)}
+  .editorial-hero__art {height:530px}
+  .editorial-hero__rear-word,.editorial-hero__front-word {font-size:clamp(64px,8.5vw,110px)}
+}
+@media (max-width:768px) {
+  .reference-hero.reference-hero--editorial {
+    padding:90px 20px 46px;
+    min-height:100svh;
+  }
+  .editorial-hero__wrap {
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    width:100%;
+    max-width:480px;
+    min-height:0;
+  }
+  .editorial-hero__art {
+    order:0;
+    flex:none;
+    margin:0 0 16px;
+    width:100%;
+    min-width:0;
+    min-height:0;
+    height:clamp(245px,70vw,340px);
+  }
+  .editorial-hero__rear-word {
+    top:13%;
+    font-size:clamp(49px,16.6vw,83px);
+    opacity:.82;
+  }
+  .editorial-hero__front-word {
+    bottom:8%;
+    font-size:clamp(48px,16.4vw,82px);
+  }
+  .editorial-hero__portrait {
+    height:100%;
+    width:auto;
+    max-width:90%;
+    bottom:0;
+    right:15%;
+  }
+  .editorial-hero__halo {inset:16% 5% 10%;filter:blur(24px)}
+  .editorial-hero__copy {
+    order:1;
+    grid-row:auto;
+    grid-column:auto;
+    width:100%;
+    min-width:0;
+    padding:0;
+  }
+  .editorial-hero__eyebrow {display:none}
+  .editorial-hero__title {
+    font-size:clamp(26px,7.55vw,37px);
+    line-height:1.04;
+    letter-spacing:-.4px;
+    white-space:normal;
+  }
+  .editorial-hero__title > span {white-space:nowrap}
+  .editorial-hero__description {
+    max-width:430px;
+    margin-top:15px;
+    font-size:14px;
+    line-height:1.5;
+  }
+  .editorial-hero__actions {
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    gap:9px;
+    margin-top:20px;
+  }
+  .editorial-hero__button {
+    width:100%;
+    min-width:0;
+    min-height:44px;
+    padding:10px 8px;
+    gap:6px;
+    font-size:clamp(11px,2.75vw,13px);
+    line-height:1.2;
+    text-align:center;
+  }
+  .editorial-hero__cta-desktop {display:none}
+  .editorial-hero__cta-mobile {display:inline}
+  .editorial-hero__proof {
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px 13px;
+    margin-top:30px;
+    font-size:10px;
+  }
+  .editorial-hero__proof-item {max-width:none;gap:6px}
+  .editorial-hero__proof-item + .editorial-hero__proof-item {padding-left:0;border:0}
+  .editorial-hero__proof-icon {width:27px;height:27px}
+  .editorial-hero__proof-icon svg {width:14px;height:14px}
+}
+@media (max-width:359px) {
+  .reference-hero.reference-hero--editorial {padding-inline:16px}
+  .editorial-hero__art {height:235px}
+  .editorial-hero__rear-word,.editorial-hero__front-word {font-size:15.8vw}
+  .editorial-hero__title {font-size:7.4vw}
+  .editorial-hero__description {font-size:13px}
+  .editorial-hero__proof {font-size:9px}
+}

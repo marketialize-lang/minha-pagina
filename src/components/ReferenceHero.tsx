@@ -30,34 +30,6 @@ export function ReferenceHero() {
       </div>
 
       <div className="editorial-hero__wrap">
-        <div className="editorial-hero__copy">
-          <p className="editorial-hero__eyebrow">ESTRATÉGIA <span aria-hidden="true">×</span> DESIGN <span aria-hidden="true">×</span> RESULTADOS</p>
-          <h1 className="editorial-hero__title" id="reference-hero-title">
-            <span>Uma boa oferta</span>
-            <span>merece uma página</span>
-            <span className="editorial-hero__title-accent">fora do padrão.</span>
-          </h1>
-          <p className="editorial-hero__description">
-            Seu negócio tem uma proposta própria. Rafael Fonseca transforma isso em{" "}
-            <strong>páginas de vendas e sites</strong> com mensagem clara, identidade e um caminho até o contato.
-          </p>
-          <div className="editorial-hero__actions">
-            <button className="editorial-hero__button editorial-hero__button--portfolio" type="button" disabled title="Os projetos serão publicados na próxima dobra">
-              Ver portfólio <span aria-hidden="true">↗</span>
-            </button>
-            <a className="editorial-hero__button editorial-hero__button--contact" href={WhatsAppLink} target="_blank" rel="noopener noreferrer">
-              <span className="editorial-hero__cta-desktop">Quero tirar meu projeto do papel</span>
-              <span className="editorial-hero__cta-mobile">Iniciar projeto</span>
-              <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-          <div className="editorial-hero__proof" aria-label="Informações sobre o trabalho">
-            <span className="editorial-hero__proof-item"><span className="editorial-hero__proof-icon"><ClockIcon /></span>6 anos no marketing</span>
-            <span className="editorial-hero__proof-item"><span className="editorial-hero__proof-icon"><GridIcon /></span>Páginas de vendas e sites</span>
-            <span className="editorial-hero__proof-item"><span className="editorial-hero__proof-icon"><UsersIcon /></span>Mais de 50 clientes</span>
-          </div>
-        </div>
-
         <div className="editorial-hero__art" aria-label="Foto de Rafael Fonseca">
           <span className="editorial-hero__rear-word" aria-hidden="true">QUEBRE</span>
           <div className="editorial-hero__halo" aria-hidden="true" />
@@ -72,6 +44,33 @@ export function ReferenceHero() {
           />
           <span className="editorial-hero__front-word" aria-hidden="true">PADRÃO</span>
         </div>
+        <div className="editorial-hero__copy">
+          <p className="editorial-hero__eyebrow">ESTRATÉGIA <span aria-hidden="true">×</span> DESIGN <span aria-hidden="true">×</span> RESULTADOS</p>
+          <h1 className="editorial-hero__title" id="reference-hero-title">
+            <span>Uma boa oferta</span>
+            <span>merece uma página</span>
+            <span className="editorial-hero__title-accent">fora do padrão.</span>
+          </h1>
+          <p className="editorial-hero__description">
+            Crio <strong>páginas de vendas e sites</strong> que destacam sua oferta com estratégia, design e clareza.
+          </p>
+          <div className="editorial-hero__actions">
+            <button className="editorial-hero__button editorial-hero__button--portfolio" type="button" disabled title="Os projetos serão publicados na próxima dobra">
+              Ver portfólio <span aria-hidden="true">↗</span>
+            </button>
+            <a className="editorial-hero__button editorial-hero__button--contact" href={WhatsAppLink} target="_blank" rel="noopener noreferrer">
+              <span className="editorial-hero__cta-desktop">Quero tirar meu projeto do papel</span>
+              <span className="editorial-hero__cta-mobile">Iniciar projeto</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div className="editorial-hero__proof" aria-label="Informações sobre o trabalho">
+            <span className="editorial-hero__proof-item"><span className="editorial-hero__proof-icon"><ClockIcon /></span>6 anos de experiência</span>
+            <span className="editorial-hero__proof-item"><span className="editorial-hero__proof-icon"><GridIcon /></span>Páginas de vendas e sites</span>
+            <span className="editorial-hero__proof-item"><span className="editorial-hero__proof-icon"><UsersIcon /></span>Mais de 50 clientes</span>
+          </div>
+        </div>
+
       </div>
       <div className="editorial-hero__footer-blur" aria-hidden="true" />
     </section>
