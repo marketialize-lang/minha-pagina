@@ -35,7 +35,7 @@ export function ReferenceHero() {
             </span>
             <span>Uma boa oferta</span>
           </span>
-          <span className="reference-hero__line reference-hero__line--fade">merece uma página</span>
+          <span className="reference-hero__line reference-hero__line--fade">pede uma página</span>
           <span className="reference-hero__line reference-hero__line--last">fora do padrão.</span>
         </h1>
 
